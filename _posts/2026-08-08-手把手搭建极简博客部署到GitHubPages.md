@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "手把手搭建极简博客：使用 heiswayi/textlog 主题部署到 GitHub Pages（Windows 版）"
+title: "手把手搭建极简博客：使用 heiswayi/textlog 主题部署到 GitHub Pages"
 tags: [极简博客, GitHub Pages, 教程, 博客搭建]
 author: Jay
 categories: 教程
@@ -13,7 +13,7 @@ comment: true
 
 ---
 
-## 📌 最终效果
+## 最终效果
 
 - **首次搭建**：博客访问地址为 `https://你的用户名.github.io/`，干净简洁
 - **已有旧站**：旧站 `https://你的用户名.github.io/` 保持不变，新博客访问 `https://你的用户名.github.io/仓库名/`
@@ -23,7 +23,7 @@ comment: true
 
 ## 🛠 准备工作
 
-- **Git**：下载安装（官网）
+- **Git**：[下载安装（官网）](https://git-scm.com/)
 - **GitHub 账号**（已登录）
 - **Windows 操作系统**（Win10/11 均可）
 - 一个**纯英文**的本地工作目录（例如 `D:\MyBlog`），避免路径中含有空格或中文（否则编译扩展时会出错）
@@ -36,6 +36,8 @@ comment: true
 
 访问 [heiswayi/textlog](https://github.com/heiswayi/textlog)，点击右上角 **Fork**，将仓库复制到你的 GitHub 账号下。
 
+![Fork截图](/textlog/img/1/fork_image.png)
+
 ### 2. 重命名仓库（关键！请根据你的情况选择）
 
 **场景 A（推荐，适合首次搭建）**：如果你尚未占用 `用户名.github.io` 这个仓库，请将 Fork 后的仓库重命名为 `用户名.github.io`（将"用户名"换成你的 GitHub ID）。
@@ -46,7 +48,7 @@ comment: true
 
 新博客访问地址为 `https://用户名.github.io/仓库名/`，与旧站互不干扰。
 
-> ⚠️ 记住你最终选定的仓库名，后面配置 `_config.yml` 中的 `baseurl` 时要用到。
+> 记住你最终选定的仓库名，后面配置 `_config.yml` 中的 `baseurl` 时要用到。
 
 ### 3. 克隆到本地（使用纯英文路径）
 
@@ -76,7 +78,7 @@ author: "你的名字"
 # 其他保持默认（如 google_analytics 留空即禁用）
 ```
 
-### 🔑 baseurl 填写规则（必看）：
+### baseurl 填写规则（必看）：
 
 | 你的仓库名 | baseurl 应设为 | 最终访问地址 |
 |------------|---------------|-------------|
@@ -96,12 +98,14 @@ author: "你的名字"
 
 我最初用最新版 Ruby（3.x）导致 Bundler 报 `untaint` 方法错误，所以请务必安装 **Ruby 2.7.8 带 DevKit**。
 
-1. 下载 [Ruby 2.7.8 带 DevKit](https://rubyinstaller.org/downloads/)
+1. 下载 [Ruby 2.7.8 带 DevKit](https://rubyinstaller.org/downloads/)（不知道下哪个？[点这里通过百度网盘下载](https://pan.baidu.com/s/1K3MM0lb1K7WMECQgWmjQnQ?pwd=jdnh)，提取码：jdnh）
 2. 安装时务必勾选：
    - "Add Ruby to PATH"
    - "MSYS2 development toolchain"
 3. 安装路径必须**纯英文且无空格**，例如 `C:\Ruby27`（不要用 `C:\Ruby + Jekyll + Bundler`，否则编译扩展时会因空格导致 make 失败）
 4. 安装完成后，**重启计算机**（或至少注销重新登录）让环境变量生效。
+
+![Ruby安装截图](/textlog/img/1/ruby.png)
 
 ### 3.2 安装 Bundler 并安装依赖
 
@@ -134,6 +138,8 @@ Server address: http://127.0.0.1:4000/textlog/
 请务必按终端显示的地址访问（如果 `baseurl` 为空，则地址为 `http://127.0.0.1:4000/`）。
 
 打开浏览器访问该地址，你应该能看到博客页面，且样式完整。
+
+![本地预览截图](/textlog/img/1/result.png)
 
 ---
 
@@ -168,40 +174,40 @@ git push origin main
 
 ---
 
-## ❓ 常见问题与解决方案
+## 常见问题与解决方案
 
-### ❌ 问题1：bundle install 报 `untaint' for String (NoMethodError)`
+### 问题1：bundle install 报 `untaint' for String (NoMethodError)`
 
 - **原因**：Ruby 版本太新（3.x），Bundler 1.17.3 不兼容。
 - **解决**：卸载当前 Ruby，安装 Ruby 2.7.8（带 DevKit），并确保路径无空格。
 
-### ❌ 问题2：安装 http_parser.rb 时 make failed, exit code 2
+### 问题2：安装 http_parser.rb 时 make failed, exit code 2
 
 - **原因**：Ruby 安装路径含有空格（如 `Ruby + Jekyll + Bundler`），导致 Makefile 解析错误。
 - **解决**：重装 Ruby 到纯英文无空格路径（如 `C:\Ruby27`）。
 
-### ❌ 问题3：本地预览样式错乱（只有文字）
+### 问题3：本地预览样式错乱（只有文字）
 
 - **原因**：`_config.yml` 中的 `baseurl` 与仓库名不一致，或访问地址忘了加 `/仓库名/`。
 - **解决**：检查 `baseurl` 是否按速查表正确填写，访问时使用终端显示的实际地址。
 
-### ❌ 问题4：线上访问样式丢失
+### 问题4：线上访问样式丢失
 
 - **原因**：GitHub Pages 未生效，或 `baseurl` 配置错误。
 - **解决**：等待几分钟，强制刷新（Ctrl+F5）；确认仓库名与 `baseurl` 一致。
 
-### ❌ 问题5：MSYS2 安装时出现 GPG 超时警告（Connection timed out）
+### 问题5：MSYS2 安装时出现 GPG 超时警告（Connection timed out）
 
 - **原因**：网络问题，但密钥未变。
 - **解决**：忽略即可，不影响 Ruby 和 Jekyll 使用。
 
-### ❌ 问题6：默认分支不是 main 而是 gh-pages
+### 问题6：默认分支不是 main 而是 gh-pages
 
 - **解决**：在 GitHub 仓库 Settings → Branches 中将默认分支改为 `main`，然后在本地执行 `git branch -m gh-pages main`，再推送。
 
 ---
 
-## 📚 补充：如何写第一篇博客
+## 补充：如何写第一篇博客
 
 文章存放在 `_posts` 文件夹，文件命名格式为 `YYYY-MM-DD-标题.md`，例如 `2026-08-08-我的第一篇文章.md`。
 
@@ -219,10 +225,10 @@ date: 2026-08-08
 
 ---
 
-## 🎉 结语
+## 结语
 
 至此，你已经拥有一个属于自己的极简博客，完全免费，数据自主。
 
 heiswayi/textlog 主题干净、无干扰，让你专注于写作本身。如果你遇到本文未提及的问题，欢迎在评论区留言，我会尽力解答。
 
-Happy Blogging！📝
+Happy Blogging！
