@@ -5,7 +5,7 @@ title: 分类
 
 <div class="home">
 	<section class="site-header">
-		<h1 class="smallcap"><a class="site-title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
+		<h1 class="smallcap"><a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
 		<p>所有文章将按分类整理在此。</p>
 	</section>
 
@@ -14,7 +14,7 @@ title: 分类
     <h2 class="tag-title" id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
     <ul class="post-list">
       {% for post in tag[1] %}
-        <a class="" href="{{ site.baseurl }}{{ post.url }}">
+        <a class="" href="{{ post.url | relative_url }}">
       <li>
         {{ post.title }},
       <time>{{ post.date | date: "%Y年%m月%d日" }}</time>
