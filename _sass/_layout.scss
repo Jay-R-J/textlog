@@ -40,7 +40,7 @@
 .site-header {
     max-width: $max-width;
     margin: 0 auto $spacing-unit;
-    padding-bottom: math.div($spacing-unit, 1.5);
+    padding-bottom: $spacing-unit / 1.5;
     border-bottom: 1px solid #f5f5f5;
     p {
       font-size: $small-font-size;
@@ -96,7 +96,7 @@
  */
 .home {
     section + section {
-        margin-top: math.div($spacing-unit, 1.2);
+        margin-top: $spacing-unit / 1.2;
         max-width: $max-width;
     }
 }

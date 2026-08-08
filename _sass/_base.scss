@@ -1,5 +1,4 @@
 
-@use "sass:math";
 
 /**
  * Reset some basic elements
@@ -49,7 +48,7 @@ p,
 pre,
 table,
 ul {
-    margin-bottom: math.div($spacing-unit, 2);
+    margin-bottom: $spacing-unit / 2;
 }
 /**
  * Images

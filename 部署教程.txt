@@ -1,0 +1,20 @@
+第 1 步：写文章或修改样式
+按之前说的，在 _posts 文件夹新增 Markdown 文件，或修改其他文件。
+
+第 2 步：提交 Git
+在 d:\MinimalistBlog\textlog 目录下运行：
+
+Bash
+
+
+
+运行
+git add -Agit commit -m "你的提交说明，比如：新增一篇学习笔记"
+第 3 步：推送到 GitHub
+Bash
+
+
+
+运行
+git push origin gh-pages
+推送完成后等 1~2 分钟，刷新网页即可看到更新。
