@@ -1,3 +1,6 @@
+
+@use "sass:math";
+
 /**
  * Reset some basic elements
  */
@@ -46,7 +49,7 @@ p,
 pre,
 table,
 ul {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: math.div($spacing-unit, 2);
 }
 /**
  * Images
@@ -96,9 +99,12 @@ h6 {
 a {
     color: $link-color;
     text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.2s ease;
 
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
+        border-bottom-color: $text-color;
     }
 }
 /**
@@ -106,10 +112,11 @@ a {
  */
 blockquote {
     color: $grey-color-dark;
-    padding-left: $spacing-unit / 2;
-    border-left: 2px solid $grey-color-light;
-    font-style: italic;
-    font-size: $small-font-size;
+    padding: 0.25rem 0 0.25rem 1.25rem;
+    margin-left: 0;
+    border-left: 2px solid #e5e5e5;
+    font-size: 0.95rem;
+    line-height: 1.8;
 
     > :last-child {
         margin-bottom: 0;
@@ -120,19 +127,24 @@ blockquote {
  */
 code,
 pre {
-    background-color: #fcfcfc;
+    background-color: #fafafa;
 }
 
 code {
-    padding: 1px 5px;
+    padding: 2px 6px;
     font-family: $code-font-family;
-    color: #f14e32;
+    color: #d6336c;
+    font-size: 0.92em;
+    border-radius: 3px;
 }
 
 pre {
-    padding: 8px 12px;
+    padding: 1.25rem;
     overflow-x: auto;
-    border: 1px solid $grey-color-light;
+    border: none;
+    border-radius: 4px;
+    line-height: 1.6;
+    font-size: 0.9rem;
 
     > code {
         border: 0;
@@ -140,6 +152,8 @@ pre {
         padding-left: 0;
         tab-size: 4;
         color: inherit;
+        font-size: inherit;
+        background: none;
     }
 }
 /**
@@ -148,33 +162,37 @@ pre {
 table {
     width: 100%;
     max-width: 100%;
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: 0;
     table-layout: fixed;
+    font-size: 0.95rem;
 }
 
 td,
 th {
-    padding: 0.5rem;
+    padding: 0.85rem 0.5rem;
     line-height: inherit;
 }
 
 th {
     text-align: left;
     vertical-align: bottom;
-    border-bottom: 2px solid $grey-color-light;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: 600;
+    color: $text-color;
 }
 
 td {
     vertical-align: top;
-    border-bottom: 1px solid $grey-color-light;
+    border-bottom: 1px solid #f5f5f5;
+    color: $grey-color-dark;
 }
 /**
  * Horizontal rule
  */
 hr {
     border: none;
-    border-top: 1px solid lighten($grey-color, 30%);
+    border-top: 1px solid #f0f0f0;
     margin: $spacing-unit auto;
 }
 /**

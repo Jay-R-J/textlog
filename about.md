@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: 关于
 ---
 
-Introduce yourself here... so people will know who you are and what you do.. blah..blah..blah..
+在这里介绍你自己...让人们了解你是谁，你在做什么...（请修改此文件内容）

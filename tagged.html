@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tagged
+title: 标签
 ---
 
 {% assign rawtags = "" %}
@@ -25,7 +25,7 @@ title: Tagged
 <div class="home">
 	<section class="site-header">
 		<h1 class="smallcap"><a class="site-title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
-		<p>All tagged posts will be sorted here.</p>
+		<p>所有文章将按标签整理在此。</p>
 	</section>
 
 	<section>
@@ -35,7 +35,7 @@ title: Tagged
 			{% for post in site.posts %}
 	    {% if post.tags contains tag %}
 			<li>
-				<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+				<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</time>
 			</li>
 			{% endif %}
 	    {% endfor %}
