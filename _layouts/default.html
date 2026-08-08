@@ -5,7 +5,7 @@
     <div class="page-content">
       {{ content }}
       <div class="copyright">
-        <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | relative_url }}"><strong>{{ site.title }}</strong></a> ― 由 <a href="https://jekyllrb.com/">Jekyll</a> 驱动，使用 <a href="https://github.com/heiswayi/textlog">Textlog</a> 主题</p>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} · <a href="{{ '/' | relative_url }}">回到首页</a></p>
       </div>
     </div>
     {% include google_analytics.html %}
