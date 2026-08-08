@@ -105,25 +105,30 @@
         margin-bottom: 0;
         list-style-type: none;
         margin-left: 0;
-        padding: 1rem 0;
-        border-bottom: 1px solid #f7f7f7;
+        padding: 1.1rem 0;
+        border-bottom: 1px solid #f5f5f5;
         display: flex;
         align-items: baseline;
         justify-content: space-between;
         gap: 1.5rem;
+        transition: padding-left 0.3s ease, border-color 0.3s ease;
+
+        &:hover {
+            padding-left: 0.75rem;
+            border-bottom-color: #e0e0e0;
+        }
 
         a {
             color: $text-color;
             text-decoration: none;
             border-bottom: none;
             font-weight: 500;
-            transition: opacity 0.2s ease;
+            transition: color 0.3s ease;
 
             &:hover {
                 color: $text-color;
                 text-decoration: none;
                 border-bottom: none;
-                opacity: 0.6;
             }
         }
 
@@ -133,7 +138,13 @@
             display: inline-block;
             font-family: $code-font-family;
             white-space: nowrap;
+            transition: color 0.3s ease;
         }
+
+        &:hover time {
+            color: #999;
+        }
+
         @include media-query($on-palm) {
             flex-direction: column;
             gap: 0.25rem;
@@ -165,6 +176,22 @@
 /**
  * Posts
  */
+.back-home {
+    display: inline-block;
+    font-size: $small-font-size;
+    color: $grey-color;
+    text-decoration: none;
+    border-bottom: none;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        color: $text-color;
+        text-decoration: none;
+        transform: translateX(-3px);
+    }
+}
+
 .post-header {
     margin-bottom: $spacing-unit;
 }
