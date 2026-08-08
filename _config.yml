@@ -1,5 +1,5 @@
 # Site settings
-title: "我的极简博客"
+title: "Pandora小窝"
 description: "记录思考和日常"
 baseurl: "/textlog" # required if used under gh-pages branch, else (under master branch) just leave empty/blank
 url: "https://Jay-R-J.github.io"
