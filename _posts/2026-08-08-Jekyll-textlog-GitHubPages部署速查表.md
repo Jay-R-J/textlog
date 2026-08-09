@@ -7,11 +7,11 @@ description: "Jekyll textlog 主题部署到 GitHub Pages 的极简命令速查�
 
 > **这是极简部署速查表**，专供遇到报错时快速复制命令。  
 > 新手小白/想看完整图文详解（含每步截图）请移步[完整保姆级教程](https://www.jay-r-j.top/textlog-github-pages-tutorial/)  
-> **（请先将完整版发布后，再把此链接替换为真实地址）**
+
 
 ---
 
-## ⚡ 一键命令清单
+## 一键命令清单
 
 ```powershell
 # 1. 克隆主题
