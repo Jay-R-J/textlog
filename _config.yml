@@ -1,6 +1,6 @@
 # Site settings
-title: "Pandora小窝"
-description: "记录思考和日常"
+title: "Minimalist Blog"
+description: "极简技术速查表 | 一键命令、避坑指南、部署报错快速解决方案"
 baseurl: "/textlog" # required if used under gh-pages branch, else (under master branch) just leave empty/blank
 url: "https://Jay-R-J.github.io"
 author: "Jay"
