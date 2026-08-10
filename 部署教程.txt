@@ -1,3 +1,15 @@
+启动步骤：
+1、cd d:\MinimalistBlog\textlog
+2、bundle exec jekyll serve
+
+
+
+
+
+
+
+
+
 第 1 步：写文章或修改样式
 按之前说的，在 _posts 文件夹新增 Markdown 文件，或修改其他文件。
 
