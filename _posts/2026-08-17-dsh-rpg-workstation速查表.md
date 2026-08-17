@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "dsh-rpg-workstation 速查表：把 DeepSeek Harness 变成 RPG 工作台"
-permalink: dsh-rpg-workstation-speed-guide
-description: "dsh-rpg-workstation 极简速查表：一条命令安装、经验公式、连击加成、14个成就、面板交互，5分钟让你的 DSH 变成 RPG 工作台。"
-categories: 技术速查
-tags: [DeepSeek Harness, RPG工作台, 插件, 速查, 游戏化]
+permalink: /dsh-rpg-workstation-quick-guide/
+categories: [技术速查, AI工具, 插件, 游戏化]
+tags: [dsh-rpg-workstation, DeepSeek Harness, DSH, DSH插件, DeepSeek Harness插件, RPG工作台, RPG面板, 成就系统, 经验值, 连击打卡, 升级, 游戏化, AI游戏化, AI习惯养成, 打怪升级, 对话打卡, 开源项目, 速查]
+description: "想让 DeepSeek Harness 变成 RPG 工作台？dsh-rpg-workstation 插件一条命令装好：对话获经验、连击加成、14个成就、浮动面板实时显示战绩，5分钟把 DSH 玩成打怪升级。"
 author: Jay
 ---
 
