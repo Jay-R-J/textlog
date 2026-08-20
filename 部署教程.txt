@@ -16,7 +16,7 @@
 第 2 步：提交 Git
 在 d:\MinimalistBlog\textlog 目录下运行：
 git add -A
-git commit -m "你的提交说明，比如：新增一篇学习笔记"
+git commit -m "新增一篇学习笔记"
 
 第 3 步：推送到 GitHub
 git push origin gh-pages
