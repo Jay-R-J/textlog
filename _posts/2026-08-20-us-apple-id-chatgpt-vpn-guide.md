@@ -9,7 +9,7 @@ author: Jay
 ---
 
 > **这是极简速查表**，只保留核心步骤和关键避坑点。  
-> 完整图文教程（含每步截图、地址生成器使用、VPN配置详解）请移步[完整保姆级教程](https://www.jay-r-j.top/)  
+> 完整图文教程（含每步截图、地址生成器使用、VPN配置详解）请移步[完整保姆级教程](https://www.jay-r-j.top/us-apple-id-chatgpt-vpn-guide/)  
 
 
 ---
@@ -64,4 +64,4 @@ author: Jay
 
 ---
 
-**完整图文教程（含每步截图、地址生成器具体使用步骤、VPN配置详解）**：[点击这里](https://www.jay-r-j.top/)  
+**完整图文教程（含每步截图、地址生成器具体使用步骤、VPN配置详解）**：[点击这里](https://www.jay-r-j.top/us-apple-id-chatgpt-vpn-guide/)  
