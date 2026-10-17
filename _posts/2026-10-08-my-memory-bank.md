@@ -19,7 +19,7 @@ author: Jay
 
 **打开就能用，不用装App，不用配任何东西。**
 
-**[点此打开我的记忆库](https://knowledge-qa-06280.app.workbuddy.host/)**
+**[点此打开我的记忆库](https://www.jay-r-j.top/knowledge-qa/)**
 
 ---
 
@@ -73,7 +73,7 @@ author: Jay
 
 ## 访问链接
 
-**[我的记忆库](https://knowledge-qa-06280.app.workbuddy.host/)**
+**[我的记忆库](https://www.jay-r-j.top/knowledge-qa/)**
 
 打开之后，第一件事就先问它：「这个网站怎么用？」
 
